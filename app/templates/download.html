@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{{url_for('static',filename='favicon.ico')}}" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download | Share-boX </title>
+    <link rel="stylesheet" href="{{url_for('static',filename='download.css')}}">
+</head>
+
+<body>
+    <img src="{{url_for('static',filename='logo.png')}}" alt="Inshare logo" class="logo">
+
+    <section class="download">
+        <img class="download__icon" src="{{url_for('static',filename='download-sd.svg')}}" alt="inshare-download">
+        
+        <h2>Your file is ready to download</h2>
+        <p>Link expires in 24 hours</p>
+        <div class="download__meta">
+            <h4>{{file['originalFileName']}}</h4>
+            <small>{{file['fileSize']}}</small>
+        </div>
+        <div class="send-btn-container">
+            <a href="/download/file?id={{ file['_id'] }}">Download file</a>
+        </div>
+        
+    </section>
+
+    
+    
+</body>
+
+</html>

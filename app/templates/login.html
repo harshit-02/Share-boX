@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% block title %}Share-boX | Login{% endblock %}
+
+{% block content %}
+    
+    <section class="Form my-1 mx-5">
+        <div class="container">
+
+            <div class="row ">                
+                <div class="col-lg-7 px-5 pt-5 ">
+                      <h1 class="font-weight-bold ">Share-boX!</h1>
+                      
+                      <h4>Log-In to your Account</h4>
+
+                    <form action="/check_login" method="post">
+                        <div class="form-row ">
+                            <div class="col-lg-7 ">
+                              <input type="email" placeholder="Email-Address" id="email" name="email5" class="form-control my-3 p-3 ">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                      
+                          <div class="col-lg-7 ">
+                            
+                            <input type="password" placeholder="*******" name="password5" id="password" class="form-control my-3 p-3 ">
+                          </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-lg-7">
+                          <button type="submit" class="btn1 mt-3 mb-5 ">Login</button>
+                        </div>
+                          
+                          
+                          {% if s2  %} 
+                          <div class="form-row">
+                           
+                           
+                            <div class="col-lg-7">
+                              <div class="alert alert-danger text-center"  role="alert">
+                                {{s2}}
+
+                              </div>
+                            </div>  
+                            
+                                  
+                       
+                          </div>
+                          {% endif %}
+                          {% if s1  %}
+                          <div class="form-row">
+                           
+                             
+                            <div class="col-lg-7">
+                              <div class="alert alert-success text-center"  role="alert">
+                                {{s1}}
+
+                              </div>
+                            </div>  
+                            
+                                  
+                       
+                          </div>
+                          {% endif %}
+
+
+                      <a href="#" class="text-center">Forgot Password?</a>
+                      <p>Don't Have an account? <a href="{{url_for('user_signup')}}">Sign-Up</a></p>
+                    </form>
+
+                </div>
+                
+                
+            </div>
+            <div class="col-lg-5">
+                  <img src="{{url_for('static',filename='undraw-upload.svg')}}" class="img-fluid image-vector" alt="" >
+                </div>
+        </div>
+    </section>
+    
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}Share-boX{% endblock %}
+
+{% block content %}
+    
+  <body>
+    <div class="container">
+      <div class="row">
+          <div class="col-sm ">
+            <h1 class="mx-1 my-4">Share-box</h1>
+            <h2 class="mx-1 my-3">Easy and secure access to all of your content </h2>
+            <h6 class="text-muted mx-1 my-3">Store, share, and collaborate on files and folders from any mobile device, tablet, or computer</h6>
+            <button type="button" class="btn btn-light">Instant Share</button>
+            <a href="{{url_for('user_signup')}}" class="btn  btn-primary" role="button">Try Share-boX</a>
+            
+
+          </div>
+          <div class="col-sm">
+              <img src="{{url_for('static',filename='share-box.svg')}}" class="share">
+          </div>
+      </div>
+    </div>
+{% endblock %}

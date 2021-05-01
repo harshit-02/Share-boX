@@ -16,5 +16,5 @@ python run.py
 
 Endpoint is at :
 ```bash
-http:localhost:5000
+http://localhost:5000
 ```
